@@ -10,7 +10,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ec30251-5a55-4b99-9e4d-7f589f5fe52f" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/com/example/babatopecustomersupport/AttachmentTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -78,7 +77,7 @@
       <recent name="com.example.babatopecustomersupport" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.AttachmentTest">
+  <component name="RunManager" selected="JUnit.TicketTest">
     <configuration name="AttachmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Babatope-CustomerSupport" />
       <extension name="coverage">
@@ -89,6 +88,21 @@
       </extension>
       <option name="PACKAGE_NAME" value="com.example.babatopecustomersupport" />
       <option name="MAIN_CLASS_NAME" value="com.example.babatopecustomersupport.AttachmentTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="TicketTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="Babatope-CustomerSupport" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.babatopecustomersupport.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.babatopecustomersupport" />
+      <option name="MAIN_CLASS_NAME" value="com.example.babatopecustomersupport.TicketTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -134,6 +148,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.TicketTest" />
         <item itemvalue="JUnit.AttachmentTest" />
       </list>
     </recent_temporary>
@@ -147,7 +162,7 @@
       <option name="presentableId" value="Default" />
       <updated>1688059719547</updated>
       <workItem from="1688059720692" duration="471000" />
-      <workItem from="1688060312052" duration="1936000" />
+      <workItem from="1688060312052" duration="3274000" />
     </task>
     <servers />
   </component>

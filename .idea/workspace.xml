@@ -10,7 +10,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8ec30251-5a55-4b99-9e4d-7f589f5fe52f" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/babatopecustomersupport/TicketServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/babatopecustomersupport/HelloServlet.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +24,9 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="JUnit5 Test Class" />
+        <option value="Jsp File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -77,7 +82,7 @@
       <recent name="com.example.babatopecustomersupport" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.TicketTest">
+  <component name="RunManager" selected="Tomcat Server.Tomcat 10.1.9">
     <configuration name="AttachmentTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="Babatope-CustomerSupport" />
       <extension name="coverage">
@@ -146,8 +151,48 @@
         </option>
       </method>
     </configuration>
+    <configuration name="index.jsp" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" temporary="true" APPLICATION_SERVER_NAME="Tomcat 10.1.9" ALTERNATIVE_JRE_ENABLED="false">
+      <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/index.jsp" />
+      <deployment>
+        <artifact name="Babatope-CustomerSupport:war exploded">
+          <settings>
+            <option name="CONTEXT_PATH" value="/Babatope_CustomerSupport_war_exploded" />
+          </settings>
+        </artifact>
+      </deployment>
+      <server-settings>
+        <option name="BASE_DIRECTORY_NAME" value="3ef69d86-fae4-4200-8809-a90ef94e005d" />
+      </server-settings>
+      <predefined_log_file enabled="true" id="Tomcat" />
+      <predefined_log_file enabled="true" id="Tomcat Catalina" />
+      <predefined_log_file id="Tomcat Manager" />
+      <predefined_log_file id="Tomcat Host Manager" />
+      <predefined_log_file id="Tomcat Localhost Access" />
+      <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Run">
+        <option name="USE_ENV_VARIABLES" value="true" />
+        <STARTUP>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </STARTUP>
+        <SHUTDOWN>
+          <option name="USE_DEFAULT" value="true" />
+          <option name="SCRIPT" value="" />
+          <option name="VM_PARAMETERS" value="" />
+          <option name="PROGRAM_PARAMETERS" value="" />
+        </SHUTDOWN>
+      </ConfigurationWrapper>
+      <method v="2">
+        <option name="Make" enabled="true" />
+        <option name="BuildArtifacts" enabled="true">
+          <artifact name="Babatope-CustomerSupport:war exploded" />
+        </option>
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Tomcat Server.index.jsp" />
         <item itemvalue="JUnit.TicketTest" />
         <item itemvalue="JUnit.AttachmentTest" />
       </list>
@@ -162,7 +207,7 @@
       <option name="presentableId" value="Default" />
       <updated>1688059719547</updated>
       <workItem from="1688059720692" duration="471000" />
-      <workItem from="1688060312052" duration="3274000" />
+      <workItem from="1688060312052" duration="16680000" />
     </task>
     <servers />
   </component>

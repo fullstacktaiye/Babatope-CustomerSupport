@@ -125,22 +125,7 @@ public class TicketServlet extends HttpServlet {
     }
 
     private void createTicketForm(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-
-        out.println("<html><body><h2>Create Ticket</h2>");
-        out.println("<form action=\"TicketServlet\" method=\"post\" enctype=\"multipart/form-data\">");
-        out.println("<input type=\"hidden\" name=\"action\" value=\"create\">");
-        out.println("<label for=\"customerName\">Customer Name:</label><br>");
-        out.println("<input type=\"text\" id=\"customerName\" name=\"customerName\"><br><br>");
-        out.println("<label for=\"subject\">Subject:</label><br>");
-        out.println("<input type=\"text\" id=\"subject\" name=\"subject\"><br><br>");
-        out.println("<label for=\"body\">Body:</label><br>");
-        out.println("<textarea id=\"body\" name=\"body\"></textarea><br><br>");
-        out.println("<label for=\"attachment\">Attachment:</label><br>");
-        out.println("<input type=\"file\" id=\"attachment\" name=\"attachment\"><br><br>");
-        out.println("<input type=\"submit\" value=\"Create Ticket\">");
-        out.println("</form>");
-        out.println("</body></html>");
+        request.getRequestDispatcher("/WEB-INF/jsp/view/ticketForm.jsp").forward(request, response);
     }
 
     private void downloadTicket(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -52,24 +52,8 @@ public class TicketServlet extends HttpServlet {
     }
 
     private void listTickets(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        PrintWriter out = response.getWriter();
-
-        // Heading and link to create a ticket
-        out.println("<html><body><h2>Tickets</h2>");
-        out.println("<a href=\"TicketServlet?action=createTicketForm\">Create Ticket</a><br><br>");
-
-        // List out the tickets
-        if (ticketMap.size() == 0) {
-            out.println("There are no tickets yet...");
-        } else {
-            for (int id : ticketMap.keySet()) {
-                Ticket ticket = ticketMap.get(id);
-                out.println("Ticket #" + id);
-                out.println(": <a href=\"TicketServlet?action=view&id=" + id + "\">");
-                out.println(ticket.getSubject() + "</a><br>");
-            }
-        }
-        out.println("</body></html>");
+        request.setAttribute("ticketMap", ticketMap);
+        request.getRequestDispatcher("/WEB-INF/jsp/view/listTickets.jsp").forward(request, response);
 
     }
 

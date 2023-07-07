@@ -79,24 +79,11 @@ public class TicketServlet extends HttpServlet {
 
         Ticket ticket = getTicket(ticketId);
 
-        PrintWriter out = response.getWriter();
-        out.println("<html><body><h2>Ticket Details</h2>");
-        out.println("<h3>" + ticket.getSubject() + "</h3>");
-        out.println("<p>Customer Name: " + ticket.getCustomerName() + "</p>");
-        out.println("<p>Body: " + ticket.getBody() + "</p>");
+        request.setAttribute("ticketId", ticketId);
+        request.setAttribute("ticket", ticket);
 
-        Map<Integer, Attachment> attachments = ticket.getAttachments();
-        if (!attachments.isEmpty()) {
-            out.println("<h4>Attachments:</h4>");
-            for (int attachmentId : attachments.keySet()) {
-                Attachment attachment = attachments.get(attachmentId);
-                out.println("<a href=\"TicketServlet?action=download&ticketId=" + ticketId +
-                        "&attachmentId=" + attachmentId + "\">" + attachment.getName() + "</a><br>");
-            }
-        }
+        request.getRequestDispatcher("/WEB-INF/jsp/view/viewTicket.jsp").forward(request, response);
 
-        out.println("<a href=\"TicketServlet\">Return to ticket list</a>");
-        out.println("</body></html>");
     }
 
     private void createTicket(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

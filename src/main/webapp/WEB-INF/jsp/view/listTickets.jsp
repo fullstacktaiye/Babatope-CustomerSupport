@@ -6,7 +6,16 @@
 <a href="<c:url value='/login'>
         <c:param name='logout'/>
     </c:url>">Logout</a>
+<c:if test="${role == 'admin'}">
+  <a href="<c:url value='/sessions'/>">View Sessions</a>
+</c:if>
 <h2>List of Tickets</h2>
+<c:if test="${role == 'admin'}">
+    <!-- Display specific content for admin users -->
+    <p>Welcome, admin user!</p>
+    <!-- Add additional content here for admin users -->
+</c:if>
+
 
 <c:if test="${not empty ticketMap}">
   <table>

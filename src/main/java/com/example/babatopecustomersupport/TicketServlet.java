@@ -53,6 +53,7 @@ public class TicketServlet extends HttpServlet {
 
     private void listTickets(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.setAttribute("ticketMap", ticketMap);
+        request.setAttribute("role", request.getSession().getAttribute("role"));
         request.getRequestDispatcher("/WEB-INF/jsp/view/listTickets.jsp").forward(request, response);
 
     }
@@ -65,6 +66,7 @@ public class TicketServlet extends HttpServlet {
 
         request.setAttribute("ticketId", ticketId);
         request.setAttribute("ticket", ticket);
+        request.setAttribute("role", request.getSession().getAttribute("role"));
 
         request.getRequestDispatcher("/WEB-INF/jsp/view/viewTicket.jsp").forward(request, response);
 

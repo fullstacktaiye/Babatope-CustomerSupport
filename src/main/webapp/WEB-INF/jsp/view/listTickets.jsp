@@ -3,6 +3,9 @@
   <title>List of Tickets</title>
 </head>
 <body>
+<a href="<c:url value='/login'>
+        <c:param name='logout'/>
+    </c:url>">Logout</a>
 <h2>List of Tickets</h2>
 
 <c:if test="${not empty ticketMap}">

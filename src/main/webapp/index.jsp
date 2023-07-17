@@ -1,1 +1,1 @@
-<jsp:forward page="/TicketServlet" />
+<c:redirect url="/TicketServlet" />

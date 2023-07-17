@@ -3,6 +3,9 @@
     <title>Ticket #<c:out value="${ticketId}"/></title>
 </head>
 <body>
+<a href="<c:url value='/login'>
+        <c:param name='logout'/>
+    </c:url>">Logout</a>
 <h2>Ticket Information</h2>
 <h3>${ticket.getSubject()}</h3>
 <p>Customer Name: ${ticket.getCustomerName()}</p>

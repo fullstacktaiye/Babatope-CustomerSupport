@@ -13,5 +13,7 @@ You must log in to access the blog website.<br><br>
     Password: <input type="password" name="password"><br><br>
     <input type="submit" value="Log In">
 </form>
+<br>
+Don't have an account? <a href="<c:url value='/signup'/>">Sign up</a>
 </body>
 </html>

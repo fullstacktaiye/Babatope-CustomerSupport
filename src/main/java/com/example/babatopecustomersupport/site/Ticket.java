@@ -1,4 +1,6 @@
-package com.example.babatopecustomersupport;
+package com.example.babatopecustomersupport.site;
+
+import com.example.babatopecustomersupport.site.Attachment;
 
 import java.util.List;
 import java.util.Map;

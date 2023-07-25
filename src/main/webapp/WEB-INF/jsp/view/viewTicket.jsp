@@ -22,7 +22,7 @@
     </c:forEach>
 </c:if>
 
-<br><a href="TicketServlet">Return to ticket list</a>
+<br><a href="<c:url value='/TicketServlet/list'/>">Return to ticket list</a>
 
 
 </body>

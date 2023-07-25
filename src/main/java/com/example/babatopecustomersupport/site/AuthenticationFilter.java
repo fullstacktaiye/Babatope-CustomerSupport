@@ -1,4 +1,4 @@
-package com.example.babatopecustomersupport;
+package com.example.babatopecustomersupport.site;
 
 import jakarta.servlet.*;
 import jakarta.servlet.annotation.WebFilter;
@@ -8,7 +8,7 @@ import jakarta.servlet.http.HttpSession;
 
 import java.io.IOException;
 
-@WebFilter(value={"/TicketServlet", "/sessions"})
+@WebFilter(value={"/TicketServlet", "/sessions", "/", "/TicketServlet/*"})
 public class AuthenticationFilter implements Filter {
     @Override
     public void init(FilterConfig filterConfig) throws ServletException {
@@ -19,7 +19,7 @@ public class AuthenticationFilter implements Filter {
         HttpSession session = ((HttpServletRequest)servletRequest).getSession(false); // don't create a session if doesn't exit
         // no one logged so redirect
         if(session == null || session.getAttribute("username") == null) {
-            ((HttpServletResponse)servletResponse).sendRedirect("login");
+            ((HttpServletResponse)servletResponse).sendRedirect(((HttpServletRequest)servletRequest).getContextPath() + "/login");
         }
         else {
             filterChain.doFilter(servletRequest, servletResponse);

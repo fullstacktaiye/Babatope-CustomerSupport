@@ -1,4 +1,4 @@
-package com.example.babatopecustomersupport;
+package com.example.babatopecustomersupport.site;
 
 import jakarta.servlet.http.HttpSession;
 

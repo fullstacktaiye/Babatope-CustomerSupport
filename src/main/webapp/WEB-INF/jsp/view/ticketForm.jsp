@@ -12,18 +12,17 @@
 </head>
 <body>
     <h1>Ticket Form</h1>
-    <form action="TicketServlet" method="post" enctype="multipart/form-data">
-        <input type="hidden" name="action" value="create">
-        <label for="customerName">Customer Name: </label>
-        <input type="text" name="customerName" id="customerName"><br>
-        <label for="subject">Subject: </label>
-        <input type="text" name="subject" id="subject"><br>
-        <label for="body">Body: </label>
-        <textarea name="body" id="body" cols="30" rows="10"></textarea><br>
-        <label for="attachment">Attachment: </label>
-        <input type="file" name="attachment" id="attachment"><br>
+    <form:form action="create" method="post" enctype="multipart/form-data" modelAttribute="ticket">
+        <form:label path="customerName">Customer Name: </form:label>
+        <form:input path="customerName" id="customerName" /><br>
+        <form:label path="subject">Subject: </form:label>
+        <form:input path="subject" id="subject" /><br>
+        <form:label path="body">Body: </form:label>
+        <form:textarea path="body" id="body" cols="30" rows="10" /><br>
+        <form:label path="attachment">Attachment: </form:label>
+        <form:input type="file" path="attachment" id="attachment" /><br>
         <input type="submit" value="Create Ticket">
-    </form>
+    </form:form>
 
 </body>
 </html>

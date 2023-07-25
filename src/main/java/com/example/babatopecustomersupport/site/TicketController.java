@@ -9,6 +9,7 @@ import org.springframework.web.servlet.View;
 import org.springframework.web.servlet.view.RedirectView;
 
 import jakarta.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpSession;
 import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
@@ -20,8 +21,9 @@ public class TicketController {
     private Map<Integer, Ticket> ticketMap = new HashMap<>();
 
     @RequestMapping(value = {"list", ""})
-    public String listTickets (Model model) {
+    public String listTickets (Model model, HttpSession session) {
         model.addAttribute("ticketMap", ticketMap);
+        model.addAttribute("role", session.getAttribute("role"));
         return "listTickets";
     }
 

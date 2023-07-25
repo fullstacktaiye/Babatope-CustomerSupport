@@ -4,7 +4,13 @@
 </head>
 <body>
 <a href="<c:url value='/logout'/>">Logout</a>
+<c:if test="${role == 'admin'}">
+  <a href="<c:url value='/sessions'/>">View Sessions</a>
+</c:if>
 <h2>List of Tickets</h2>
+<c:if test="${role == 'admin'}">
+  <p>Welcome, admin user!</p>
+</c:if>
 <a href="<c:url value='/TicketServlet/create'/>">Create Ticket</a><br><br>
 <c:choose>
   <c:when test="${ticketMap.size() == 0}">

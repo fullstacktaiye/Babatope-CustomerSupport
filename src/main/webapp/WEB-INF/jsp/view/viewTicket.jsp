@@ -3,9 +3,7 @@
     <title>Ticket #<c:out value="${ticketId}"/></title>
 </head>
 <body>
-<a href="<c:url value='/login'>
-        <c:param name='logout'/>
-    </c:url>">Logout</a>
+<a href= "<c:url value='/logout'/>">Logout</a>
 <c:if test="${role == 'admin'}">
     <a href="<c:url value='/sessions'/>">View Sessions</a>
 </c:if>
@@ -17,7 +15,7 @@
 <c:if test="${not empty ticket.getAttachments()}">
     <h4>Attachments:</h4>
     <c:forEach var="attachment" items="${ticket.getAttachments()}">
-        <a href="TicketServlet?action=download&amp;ticketId=${ticketId}&amp;attachmentId=${attachment.key}">
+        <a href="<c:url value='/TicketServlet/${ticketId}/attachment/${attachment.value.name}'/>">
                 ${attachment.value.getName()}</a><br>
     </c:forEach>
 </c:if>

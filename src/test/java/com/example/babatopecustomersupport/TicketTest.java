@@ -1,6 +1,6 @@
 package com.example.babatopecustomersupport;
 
-import com.example.babatopecustomersupport.site.Attachment;
+import com.example.babatopecustomersupport.entities.Attachment;
 import com.example.babatopecustomersupport.site.Ticket;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;

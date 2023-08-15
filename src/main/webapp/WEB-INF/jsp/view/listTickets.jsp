@@ -13,14 +13,14 @@
 </c:if>
 <a href="<c:url value='/TicketServlet/create'/>">Create Ticket</a><br><br>
 <c:choose>
-  <c:when test="${ticketMap.size() == 0}">
+  <c:when test="${ticketDB.size() == 0}">
     <p>There are no tickets yet...</p>
   </c:when>
   <c:otherwise>
-    <c:forEach var="ticketEntry" items="${ticketMap}">
-      Ticket#<c:out value="${ticketEntry.key}"/>:&nbsp;
-      <a href="<c:url value='/TicketServlet/view/${ticketEntry.key}'/>">
-        <c:out value="${ticketEntry.value.customerName}"/></a><br>
+    <c:forEach var="ticketEntry" items="${ticketDB}">
+      Ticket#<c:out value="${ticketEntry.id}"/>:&nbsp;
+      <a href="<c:url value='/TicketServlet/view/${ticketEntry.id}'/>">
+        <c:out value="${ticketEntry.customerName}"/></a><br>
     </c:forEach>
   </c:otherwise>
 </c:choose>
